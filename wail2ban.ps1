@@ -70,6 +70,7 @@ $OSVersion = invoke-expression "wmic os get Caption /value"
 if ($OSVersion -match "2008") { $BLOCK_TYPE = "NETSH" }
 if ($OSVersion -match "2012") { $BLOCK_TYPE = "NETSH" }
 if ($OSVersion -match "2016") { $BLOCK_TYPE = "NETSH" }
+if ($OSVersion -match "Windows 10") { $BLOCK_TYPE = "NETSH" }
 
 #Grep configuration file 
 switch -regex -file $ConfigFile {
